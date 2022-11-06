@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) => {
 	const [nextNums, setNextNums] = useState(1);
-	const [prevNums, setPrevNums] = useState(1);
 	let pages = [];
 	const totalPages = Math.ceil(totalPosts / postsPerPage);
 
@@ -21,7 +20,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 	return (
 		<div className="flex items-center text-[#333333]">
 			<button
-				className={`text-[48px] ${currentPage === 1 ? 'text-[#333333a4]' : ''}`}
+				className={`text-[30px] md:text-[48px] ${currentPage === 1 ? 'text-[#333333a4]' : ''}`}
 				onClick={() => setCurrentPage(currentPage - 1)}
 				disabled={currentPage === 1 ? true : false}
 			>
@@ -35,7 +34,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 							return (
 								<button
 									key={index}
-									className={`text-[#333333] px-2 mx-1 ${
+									className={`text-[#333333] px-1 md:px-2 mx-1 ${
 										page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''
 									}`}
 									onClick={() => setCurrentPage(page)}
@@ -53,7 +52,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 				return (
 					<button
 						key={index}
-						className={`text-[#333333] px-2 mx-1 ${page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''}`}
+						className={`text-[#333333] px-1 md:px-2 mx-1 ${page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''}`}
 						onClick={() => setCurrentPage(page)}
 					>
 						{page}
@@ -69,7 +68,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 							return (
 								<button
 									key={index}
-									className={`text-[#333333] px-2 mx-1 ${
+									className={`text-[#333333] px-1 md:px-2 mx-1 ${
 										page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''
 									}`}
 									onClick={() => setCurrentPage(page)}
@@ -83,7 +82,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 			</div>
 
 			<button
-				className={`text-[48px] ${currentPage === totalPosts.length ? 'text-[#333333a4]' : ''}`}
+				className={`text-[30px] md:text-[48px] ${currentPage === totalPosts.length ? 'text-[#333333a4]' : ''}`}
 				onClick={() => setCurrentPage(currentPage + 1)}
 				disabled={currentPage === totalPosts.length ? true : false}
 			>
