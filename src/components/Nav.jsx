@@ -33,7 +33,7 @@ const Nav = () => {
 										data-dropdown-toggle="dropdown"
 										onClick={() => setDropdown(!dropdown)}
 									>
-										<img src={user?.photoURL} alt="Profile photo" />
+										<img src={user?.photoURL} alt="user" />
 									</div>
 								</div>
 
