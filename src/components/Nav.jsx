@@ -33,7 +33,7 @@ const Nav = () => {
 										id="dropdownDefault"
 										data-dropdown-toggle="dropdown"
 									>
-										<img src={ '/person.svg'} alt="user" className="w-full h-full rounded-full" />
+										<img src={user?.photoURL || '/person.svg'} alt="user" className="w-full h-full rounded-full" />
 									</div>
 								</div>
 
