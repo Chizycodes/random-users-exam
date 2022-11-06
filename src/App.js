@@ -1,4 +1,3 @@
-import './App.css';
 import UsersList from './pages/usersList';
 import Home from './pages/home';
 import Error404 from './pages/error404';

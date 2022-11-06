@@ -18,10 +18,13 @@ const Login = () => {
 		if (user != null) {
 			navigate('/users');
 		}
-	}, [user]);
+	}, [user, navigate]);
 	return (
 		<div className="text-[#333333] h-screen w-full grid grid-cols-12">
-			<div className="bg-[url('/ready-back-school.jpg')] bg-cover bg-no-repeat bg-left col-span-6 h-full hidden md:block"></div>
+			<div
+				style={{ backgroundImage: `url(/school.png)` }}
+				className="bg-cover bg-no-repeat bg-left col-span-6 h-full hidden md:block"
+			></div>
 			<div className="col-span-12 md:col-span-6 h-full flex flex-col items-center justify-center px-5">
 				<h1 className="font-semibold text-[28px] mb-5 text-center">Welcome back!</h1>
 				<button

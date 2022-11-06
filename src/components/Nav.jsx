@@ -18,7 +18,7 @@ const Nav = () => {
 				<Link to="/" className="text-[#1e75ff] font-bold text-[20px]">
 					AltSchool Project
 				</Link>
-				<div className="flex items-center gap-5">
+				<div className="flex items-center gap-1 md:gap-5">
 					<Link to="/error-boundary" className="hover:text-[#1e75ff]">
 						Error Boundary
 					</Link>
