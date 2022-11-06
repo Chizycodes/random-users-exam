@@ -14,7 +14,6 @@ const UsersList = () => {
 	const firstPostIndex = lastPostIndex - postsPerPage;
 	const currentUsers = users?.slice(firstPostIndex, lastPostIndex);
 
-	console.log(currentUsers);
 	useEffect(() => {
 		setLoading(true);
 		axios
@@ -22,12 +21,11 @@ const UsersList = () => {
 			.then(function (response) {
 				// handle success
 				setUsers(response.data.results);
-				console.log(response.data.results);
+				// console.log(response.data.results);
 				setLoading(false);
 			})
 			.catch(function (error) {
-				// handle error
-				console.log(error);
+			
 				setLoading(false);
 			});
 	}, []);
