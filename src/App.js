@@ -1,4 +1,3 @@
-import './App.css';
 import UsersList from './pages/usersList';
 import Error404 from './pages/error404';
 import { Route, Routes } from 'react-router-dom';
