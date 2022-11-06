@@ -14,11 +14,11 @@ const Nav = () => {
 	};
 	return (
 		<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded shadow absolute right-0 left-0 z-10">
-			<div className="flex items-center justify-between px-5 py-3 text-[black]">
-				<Link to="/" className="text-[#1e75ff] font-bold text-[20px]">
+			<div className="flex items-center justify-end px-5 py-3 text-[black]">
+				{/* <Link to="/" className="text-[#1e75ff] font-bold text-[20px]">
 					AltSchool Project
-				</Link>
-				<div className="flex items-center gap-1 md:gap-5">
+				</Link> */}
+				<div className="flex items-center gap-3 md:gap-5">
 					<Link to="/error-boundary" className="hover:text-[#1e75ff]">
 						Error Boundary
 					</Link>
@@ -26,14 +26,14 @@ const Nav = () => {
 					{user?.displayName ? (
 						<div className="flex items-center gap-5">
 							<div className="relative">
-								<div className="">
+								<div className="flex items-center cursor-pointer" onClick={() => setDropdown(!dropdown)}>
+									<img src="/drop-down.svg" alt="drop down icon" className="w-[30px]" />
 									<div
-										className="w-[40px] h-[40px] rounded-full overflow-hidden cursor-pointer"
+										className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#1e75ff]]"
 										id="dropdownDefault"
 										data-dropdown-toggle="dropdown"
-										onClick={() => setDropdown(!dropdown)}
 									>
-										<img src={user?.photoURL} alt="user" />
+										<img src={ '/person.svg'} alt="user" className="w-full h-full rounded-full" />
 									</div>
 								</div>
 

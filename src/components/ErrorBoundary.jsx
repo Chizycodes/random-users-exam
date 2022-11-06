@@ -6,9 +6,6 @@ class ErrorBoundary extends React.Component {
 		this.state = { error: null, errorInfo: null };
 	}
 
-	// static getDerivedStateFromError(error) {
-	//   return { hasError: true };
-	// }
 
 	componentDidCatch(error, errorInfo) {
 		this.setState({
@@ -20,7 +17,7 @@ class ErrorBoundary extends React.Component {
 	render() {
 		if (this.state.errorInfo) {
 			return (
-				<div className="min-h-screen w-screen flex flex-col items-center justify-center font-bold text-xl mr-3">
+				<div className="min-h-screen w-screen flex flex-col items-center justify-center font-bold text-xl px-3">
 					<h2>Oh No! An Error Has Occurred</h2>
 					<details>
 						{this.state.error && this.state.error.toString()}
