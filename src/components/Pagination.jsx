@@ -6,10 +6,11 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 		pages.push(i);
 	}
 	return (
-		<div>
+		<div className="flex items-center text-[#333333]">
 			<button
-				className={`mr-2 text-[20px] ${currentPage === 1 ? 'cursor-not-allowed text-gray-500' : ''}`}
+				className={`text-[48px] ${currentPage === 1 ? 'text-[#333333a4]' : ''}`}
 				onClick={() => setCurrentPage(currentPage - 1)}
+				disabled={currentPage === 1 ? 'true' : 'false'}
 			>
 				&lt;
 			</button>
@@ -17,9 +18,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 				return (
 					<button
 						key={index}
-						className={`text-[#333333] px-2 mx-1 ${
-							page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''
-						}`}
+						className={`text-[#333333] px-2 mx-1 ${page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''}`}
 						onClick={() => setCurrentPage(page)}
 					>
 						{page}
@@ -28,13 +27,11 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 			})}
 			<span>...</span>
 
-			{pages.slice(totalPages - 2, totalPages).map((page, index) => {
+			{pages.slice(totalPages - 1, totalPages).map((page, index) => {
 				return (
 					<button
 						key={index}
-						className={`text-[#333333] px-2 mx-1 ${
-							page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''
-						}`}
+						className={`text-[#333333] px-2 mx-1 ${page === currentPage ? 'bg-[#1e75ff] text-white rounded' : ''}`}
 						onClick={() => setCurrentPage(page)}
 					>
 						{page}
@@ -42,8 +39,9 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage, currentPage }) =
 				);
 			})}
 			<button
-				className={`ml-2 text-[20px] ${currentPage === totalPosts.length ? 'cursor-not-allowed text-gray-500' : ''}`}
+				className={`text-[48px] ${currentPage === totalPosts.length ? 'text-[#333333a4]' : ''}`}
 				onClick={() => setCurrentPage(currentPage + 1)}
+				disabled={currentPage === totalPosts.length ? 'true' : 'false'}
 			>
 				&gt;
 			</button>

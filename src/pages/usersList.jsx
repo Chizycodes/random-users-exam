@@ -31,11 +31,11 @@ const UsersList = () => {
 	}, []);
 
 	return (
-		<div className="w-full flex flex-col items-center pt-10">
-			<h1 className="text-[2rem] font-bold mb-3">Users</h1>
+		<div className="w-full flex flex-col items-center pt-[100px]">
+			<h1 className="text-[20px] md:text-[2rem] text-[#333333] font-bold">Users</h1>
 
 			{loading ? (
-				<div className="mt-40">
+				<div className="mt-20">
 					<Loader />
 				</div>
 			) : (
